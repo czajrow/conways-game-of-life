@@ -1,4 +1,6 @@
-start: bin/life
+build: bin/life
+
+run: bin/life
 	bin/life
 
 bin/life: src/main.o src/macierz.o src/generacja.o src/easteregg.o

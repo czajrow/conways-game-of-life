@@ -1,0 +1,41 @@
+NAME
+     life – implementation of Conway's Game of Life
+
+SYNOPSIS
+     life [s:n:v:m:dith] [file ...]
+
+DESCRIPTION
+     The Game of Life, also known simply as Life, is a cellular automaton devised by the British mathematician John Horton Conway in 1970.[1] It is a zero-player game, meaning that its evolution is determined by its initial state, requiring no further input. One interacts with the Game of Life by creating an initial configuration and observing how it evolves. It is Turing complete and can simulate a universal constructor or any other Turing machine.
+
+     The options are as follows:
+
+     -s     Type of neighbourhood. "moore" or "neumann".
+     -n     Number of generations to generate.
+     -v     Interval of displaying generations on the screen in ms.
+     -m     Interval mode. Options are "image" (default) and "line". This means to wait before displaying each generation, or single row of automata.
+     
+     -d     Whether to display generations on screen or not.
+     -i     Whether to save images of generations or not.
+     -t     Whether to save generations as TXT files or not.
+     -h     Display this helper.
+
+EXIT STATUS
+     The life utility exits 0 on success, and >0 if an error occurs.
+EXAMPLES
+     The command:
+
+           ./bin/life -s moore -n 3 -v 4 -m line -d dane/biblioteka/blinker
+
+     will display 3 generations of blinker waiting 4ms before printing each row of generation using Moore's neighbourhood.
+
+     The command:
+
+           ./bin/life -s moore -n 30 -i -t dane/biblioteka/blinker
+
+     will save 30 txt files and 30 pbm files containing 30 generations of blinker. Will use Moore's neighbourhood. Will not print anythink on the screen.
+
+     The command:
+
+           ./bin/life -h
+
+     will print this helper.

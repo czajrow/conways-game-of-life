@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <unistd.h>
 
 #include "macierz.h"
 
@@ -49,11 +50,16 @@ int czytaj(FILE *plik) {
   return 0;
 }
 
-void wypisz() {
+void wypisz(int clear, int interval) {
+  if (clear) for (int i = 0; i < mac.y + 1; i++) printf("\033[1A");
+
   int i;
   for (i = 0; i < mac.x * mac.y; i++) {
-    if (i % mac.x == 0)
+    if (i % mac.x == 0) {
       printf("\n");
+      printf("\033[K");
+      if (interval > 0) usleep(interval * 1000);
+    }
     if (mac.tab[i] == 0)
       printf("__");
     else

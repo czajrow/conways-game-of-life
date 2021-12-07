@@ -68,14 +68,14 @@ void wypisz(int clear, int interval) {
   printf("\n");
 }
 
-void rysuj(FILE *plik) {
+void rysuj(FILE *plik) { // save img file
   int i;
   fprintf(plik, "P1\n%d %d\n", mac.x, mac.y);
   for (i = 0; i < mac.x * mac.y; ++i)
     fprintf(plik, "%d ", mac.tab[i]);
 }
 
-void zapiszTXT(FILE *plik) {
+void zapiszTXT(FILE *plik) { // save txt file
   int i;
   fprintf(plik, "%d %d\n", mac.x, mac.y);
   for (i = 0; i < mac.x * mac.y; ++i) {

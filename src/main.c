@@ -68,8 +68,8 @@ int main(int argc, char **argv) {
     return 6;
   }
 
-  if (l_generacji < 1 || l_generacji > 100) {
-    printf("Number of generations must be between 1 and 100\n");
+  if (l_generacji < 1 || l_generacji > 10000) {
+    printf("Number of generations must be between 1 and 10000\n");
     return 6;
   }
 

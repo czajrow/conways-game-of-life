@@ -24,7 +24,7 @@ void generuj8() {
 }
 
 void generuj4() {
-  int x, y, x1, y1, x2, y2, n, i;
+  int x, y, x1, y1, n, i;
   wymiary(&x, &y);
   for (y1 = 0; y1 < y; y1++)     // po kolumnach
     for (x1 = 0; x1 < x; x1++) { // po wierszach

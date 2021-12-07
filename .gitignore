@@ -1,5 +1,7 @@
 bin/
 !bin/.keep
+!dane/wyniki/*.txt
+!dane/wyniki/*.pbm
 
 src/*.o
 .DS_Store
